@@ -1,3 +1,3 @@
 function alertB{
-	alert("Hello") 
+	alert("Hello");
 } 
