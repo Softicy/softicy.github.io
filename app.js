@@ -1,0 +1,3 @@
+function alertB{
+	alert("Hello") 
+} 
