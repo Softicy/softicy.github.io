@@ -1,0 +1,1 @@
+if(console){var cookiedomainwarning='Error: The domain WEBSHOP.DANSKSKOLEFOTO.DK is not authorized to show the cookie banner for domain group ID 5da4d4c4-eed8-47b1-8c11-c48535c6131f. Please add it to the domain group in the Cookiebot Manager to authorize the domain.';if(typeof console.warn === 'function'){console.warn(cookiedomainwarning)}else{console.log(cookiedomainwarning)}};
